@@ -1,18 +1,41 @@
+
 {
   "id": "basanta-jpt-rockers",
   "title": "Basanta - JPT Rockers",
-  "artist": "",
-  "key": "",
-  "capo": 0,
-  "strumming": "",
+  "artist": "JPT Rockers",
+  "key": "G",
+  "capo": 3,
+  "strumming": "DUU DUU DDU",
   "sections": [
     {
       "name": "Verse 1",
-      "lines": []
+      "lines": [
+        "[Cadd9]Timro Ooth lai choyera niskida",
+        "harek jhuto rangeen sacho [G]bho",
+        "[Cadd9]Timilai angaale yesto lagyo ki",
+        "mero sansar [G]timi hau"
+      ]
+    },
+    {
+      "name": "Verse 2",
+      "lines": [
+        "[Cadd9]yadi arko janma hunchha Bhane",
+        "dohoryaera feri timi sangai [G]bitos",
+        "",
+        "[Cadd9]Muskaanle sajaula timlai",
+        "pirati bhaaka [G]gungunaudai"
+      ]
     },
     {
       "name": "Chorus",
-      "lines": []
+      "lines": [
+        "[Cadd9]Banda aakha kaa sapani pani",
+        "",
+        "[G]timrai aakriti kori dincha",
+        "[Cadd9]badli rahane [D]yo [G]mausam pani",
+        "[Cadd9]timi chhau [D]saath ta",
+        "[G]Basanta Fulchha."
+      ]
     }
   ]
 }
