@@ -1,26 +1,1161 @@
+
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#101216"><title>LazyChords</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<meta name="theme-color" content="#101216">
+
+<title>Lazy Chords</title>
+
 <style>
-:root{color-scheme:dark;--bg:#101216;--panel:#1b1e24;--border:#32363e;--muted:#a1a6b1;--accent:#adc3ac;--text:#f1f1f2}*{box-sizing:border-box}html{height:100%}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.shell{max-width:780px;margin:auto;padding:24px 17px 100px}header{display:flex;align-items:center;gap:12px;margin-bottom:22px}.mark{font-size:29px}.sub{color:var(--muted);font-size:13px;margin:0}h1{font-size:24px;line-height:1.1;margin:0}h2{font-size:23px;margin:0}.hidden{display:none!important}input{width:100%;padding:14px 16px;background:#1b1e24;border:1px solid var(--border);color:white;border-radius:12px;font:inherit;outline:none}input:focus{border-color:var(--accent)}.song-item{display:flex;text-align:left;width:100%;justify-content:space-between;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--border);border-radius:15px;margin-top:12px;padding:18px;color:var(--text);cursor:pointer}.song-item strong{display:block;font-size:17px}.song-item small{color:var(--muted)}.arrow{font-size:24px;color:var(--accent)}button{font:inherit;cursor:pointer}.back{border:0;background:transparent;color:var(--accent);font-weight:600;padding:8px 0;margin-bottom:14px}.detail-heading{margin-bottom:16px}.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.pill{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:6px 12px;font-size:13px;color:var(--muted)}.pattern{background:var(--panel);border:1px solid var(--border);border-radius:15px;padding:16px;margin:20px 0}.pattern label{display:block;color:var(--muted);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.pattern strong{color:var(--accent);font-size:21px;letter-spacing:.07em}.controls{position:sticky;top:0;background:rgba(16,18,22,.97);border:1px solid var(--border);border-radius:15px;padding:12px;z-index:2;backdrop-filter:blur(8px);margin:16px 0 27px}.controls-top{display:flex;align-items:center;gap:10px}.primary{background:var(--accent);border:0;border-radius:10px;padding:11px 18px;color:#101216;font-weight:750;min-width:95px}.secondary{background:var(--panel);border:1px solid var(--border);color:#fff;border-radius:10px;padding:10px 13px}.speed{margin-top:10px;display:flex;align-items:center;gap:9px}.speed label{color:var(--muted);font-size:13px;white-space:nowrap}.speed input{padding:0;accent-color:var(--accent);height:25px;flex:1}.speed output{color:var(--accent);font-weight:700;font-size:14px;min-width:42px;text-align:right}.section{margin:32px 0}.section h3{color:var(--muted);text-transform:uppercase;font-size:12px;letter-spacing:.1em;margin:0 0 18px}.lyric-line{display:flex;flex-wrap:wrap;align-items:end;column-gap:0;row-gap:3px;margin:0 0 20px;min-height:45px}.segment{display:inline-flex;flex-direction:column;align-items:flex-start;white-space:pre-wrap}.chord{height:21px;font-size:14px;line-height:21px;font-weight:700;letter-spacing:.01em;color:var(--accent);white-space:nowrap}.words{font-size:18px;line-height:1.5;white-space:pre-wrap}footer{color:var(--muted);font-size:12px;margin-top:36px}.empty{color:var(--muted);padding:30px 0}@media(min-width:700px){.words{font-size:20px}.shell{padding-top:38px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+:root {
+
+  color-scheme: dark;
+
+  --bg: #101216;
+
+  --panel: #1b1e24;
+
+  --border: #32363e;
+
+  --muted: #a1a6b1;
+
+  --accent: #adc3ac;
+
+  --text: #f1f1f2;
+
+}
+
+* { box-sizing: border-box; }
+
+html { height: 100%; }
+
+body {
+
+  margin: 0;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  font: 16px/1.5 system-ui, -apple-system, sans-serif;
+
+}
+
+.shell {
+
+  max-width: 780px;
+
+  margin: auto;
+
+  padding: 24px 17px 100px;
+
+}
+
+header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+}
+
+.mark { font-size: 29px; }
+
+h1 {
+
+  font-size: 25px;
+
+  line-height: 1.2;
+
+  margin: 0;
+
+}
+
+h2 {
+
+  font-size: 23px;
+
+  margin: 0;
+
+}
+
+.sub {
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  margin: 3px 0 0;
+
+}
+
+.hidden { display: none !important; }
+
+input[type="search"] {
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  background: var(--panel);
+
+  border: 1px solid var(--border);
+
+  color: white;
+
+  border-radius: 12px;
+
+  font: inherit;
+
+  outline: none;
+
+}
+
+input:focus { border-color: var(--accent); }
+
+button {
+
+  font: inherit;
+
+  cursor: pointer;
+
+}
+
+.song-item {
+
+  display: flex;
+
+  text-align: left;
+
+  width: 100%;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background: var(--panel);
+
+  border: 1px solid var(--border);
+
+  border-radius: 15px;
+
+  margin-top: 12px;
+
+  padding: 18px;
+
+  color: var(--text);
+
+}
+
+.song-item strong {
+
+  display: block;
+
+  font-size: 17px;
+
+}
+
+.song-item small {
+
+  color: var(--muted);
+
+}
+
+.arrow {
+
+  font-size: 24px;
+
+  color: var(--accent);
+
+}
+
+.back {
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--accent);
+
+  font-weight: 600;
+
+  padding: 8px 0;
+
+  margin-bottom: 14px;
+
+}
+
+.detail-heading { margin-bottom: 16px; }
+
+.meta {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 13px;
+
+}
+
+.pill {
+
+  background: var(--panel);
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  padding: 6px 12px;
+
+  font-size: 13px;
+
+  color: var(--muted);
+
+}
+
+.pattern {
+
+  background: var(--panel);
+
+  border: 1px solid var(--border);
+
+  border-radius: 15px;
+
+  padding: 16px;
+
+  margin: 20px 0;
+
+}
+
+.pattern label {
+
+  display: block;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+
+}
+
+.pattern strong {
+
+  color: var(--accent);
+
+  font-size: 21px;
+
+  letter-spacing: .07em;
+
+}
+
+.controls {
+
+  position: sticky;
+
+  top: 0;
+
+  background: rgba(16,18,22,.97);
+
+  border: 1px solid var(--border);
+
+  border-radius: 15px;
+
+  padding: 12px;
+
+  z-index: 2;
+
+  backdrop-filter: blur(8px);
+
+  margin: 16px 0 27px;
+
+}
+
+.controls-top {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+.primary {
+
+  background: var(--accent);
+
+  border: 0;
+
+  border-radius: 10px;
+
+  padding: 11px 18px;
+
+  color: #101216;
+
+  font-weight: 750;
+
+  min-width: 95px;
+
+}
+
+.secondary {
+
+  background: var(--panel);
+
+  border: 1px solid var(--border);
+
+  color: white;
+
+  border-radius: 10px;
+
+  padding: 10px 13px;
+
+}
+
+.speed {
+
+  margin-top: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+}
+
+.speed label {
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  white-space: nowrap;
+
+}
+
+.speed input {
+
+  accent-color: var(--accent);
+
+  height: 25px;
+
+  flex: 1;
+
+  min-width: 0;
+
+}
+
+.speed output {
+
+  color: var(--accent);
+
+  font-weight: 700;
+
+  font-size: 14px;
+
+  min-width: 42px;
+
+  text-align: right;
+
+}
+
+.section { margin: 32px 0; }
+
+.section h3 {
+
+  color: var(--muted);
+
+  text-transform: uppercase;
+
+  font-size: 12px;
+
+  letter-spacing: .1em;
+
+  margin: 0 0 18px;
+
+}
+
+.lyric-line {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: end;
+
+  column-gap: 0;
+
+  row-gap: 3px;
+
+  margin: 0 0 20px;
+
+  min-height: 45px;
+
+}
+
+.segment {
+
+  display: inline-flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  white-space: pre-wrap;
+
+}
+
+.chord {
+
+  height: 21px;
+
+  font-size: 14px;
+
+  line-height: 21px;
+
+  font-weight: 700;
+
+  color: var(--accent);
+
+  white-space: nowrap;
+
+}
+
+.words {
+
+  font-size: 18px;
+
+  line-height: 1.5;
+
+  white-space: pre-wrap;
+
+}
+
+footer {
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  margin-top: 36px;
+
+}
+
+.empty {
+
+  color: var(--muted);
+
+  padding: 30px 0;
+
+}
+
+@media (min-width: 700px) {
+
+  .words { font-size: 20px; }
+
+  .shell { padding-top: 38px; }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  * { scroll-behavior: auto !important; }
+
+}
+
 </style>
+
 </head>
-<body><main class="shell"><header><span class="mark">🎸</span><div><h1>My Guitar Songbook</h1><p class="sub">My chords. My strumming. My pace.</p></div></header>
-<section id="library"><input id="search" type="search" placeholder="Search songs or artists…" aria-label="Search songs"><div id="song-list"></div><p id="library-status" class="empty hidden"></p></section>
-<section id="detail" class="hidden"><button class="back" id="back">← All songs</button><div class="detail-heading"><h2 id="song-title"></h2><p id="artist" class="sub"></p><div class="meta" id="meta"></div></div><div class="pattern"><label>Strumming pattern</label><strong id="strumming"></strong></div><div class="controls"><div class="controls-top"><button class="primary" id="play">▶ Play</button><button class="secondary" id="restart">↺ Top</button></div><div class="speed"><label for="speed">Seconds / line</label><input id="speed" type="range" min="0.1" max="5" step="0.1" value="2.5"><output id="speed-label">2.5s</output></div></div><div id="lyrics"></div><footer>Use Play to automatically scroll through the song. Pause at any time.</footer></section></main>
+
+<body>
+
+<main class="shell">
+
+<header>
+
+  <span class="mark">🎸</span>
+
+  <div>
+
+    <h1>Lazy Chords</h1>
+
+    <p class="sub">My chords. My strumming. My pace.</p>
+
+  </div>
+
+</header>
+
+<section id="library">
+
+  <input
+
+    id="search"
+
+    type="search"
+
+    placeholder="Search songs or artists…"
+
+    aria-label="Search songs"
+
+  >
+
+  <div id="song-list"></div>
+
+  <p id="library-status" class="empty hidden"></p>
+
+</section>
+
+<section id="detail" class="hidden">
+
+  <button class="back" id="back">
+
+    ← All songs
+
+  </button>
+
+  <div class="detail-heading">
+
+    <h2 id="song-title"></h2>
+
+    <p id="artist" class="sub"></p>
+
+    <div class="meta" id="meta"></div>
+
+  </div>
+
+  <div class="pattern">
+
+    <label>Strumming Pattern</label>
+
+    <strong id="strumming"></strong>
+
+  </div>
+
+  <div class="controls">
+
+    <div class="controls-top">
+
+      <button class="primary" id="play">
+
+        ▶ Play
+
+      </button>
+
+      <button class="secondary" id="restart">
+
+        ↺ Top
+
+      </button>
+
+    </div>
+
+    <div class="speed">
+
+      <label for="speed">Seconds / line</label>
+
+      <input
+
+        id="speed"
+
+        type="range"
+
+        min="0.1"
+
+        max="5"
+
+        step="0.1"
+
+        value="2.5"
+
+      >
+
+      <output id="speed-label">2.5s</output>
+
+    </div>
+
+  </div>
+
+  <div id="lyrics"></div>
+
+  <footer>
+
+    Use Play to scroll automatically.
+
+    Pause whenever you need to practice.
+
+  </footer>
+
+</section>
+
+</main>
+
 <script>
+
 'use strict';
-let songs=[], current=null, playing=false, previousTime=0, frame=null;
-const $=id=>document.getElementById(id);
-const create=(tag,cls,content)=>{const el=document.createElement(tag);if(cls)el.className=cls;if(content!==undefined)el.textContent=String(content);return el};
-function parseLine(line){const out=[];const re=/\[([^\]]+)\]/g;let index=0,lastChord='';for(const m of line.matchAll(re)){if(m.index>index||lastChord)out.push({chord:lastChord,text:line.slice(index,m.index)});lastChord=m[1];index=m.index+m[0].length;}out.push({chord:lastChord,text:line.slice(index)});return out;}
-function renderLibrary(){const list=$('song-list');list.replaceChildren();const q=$('search').value.toLowerCase().trim();const matches=songs.filter(s=>`${s.title} ${s.artist||''}`.toLowerCase().includes(q)).sort((a,b)=>a.title.localeCompare(b.title,undefined,{sensitivity:'base',ignorePunctuation:true}));$('library-status').classList.toggle('hidden',matches.length!==0);$('library-status').textContent=songs.length?'No songs found.':'No songs added yet.';for(const s of matches){const item=create('button','song-item');item.type='button';const info=create('span');info.append(create('strong','',s.title),create('small','',([s.artist,s.key?'Key: '+s.key:''].filter(Boolean).join(' · ')||'Tap to open')));item.append(info,create('span','arrow','›'));item.onclick=()=>{history.replaceState(null,'','#'+encodeURIComponent(s.id));showSong(s.id)};list.append(item)}}
-async function showSong(id){const entry=songs.find(x=>x.id===id);if(!entry)return;pause();const root=$('lyrics');root.replaceChildren(create('p','empty','Loading song…'));$('library').classList.add('hidden');$('detail').classList.remove('hidden');window.scrollTo(0,0);let s;try{const response=await fetch(entry.file,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);s=await response.json();if(!s || !Array.isArray(s.sections))throw Error('Invalid song format');}catch(err){root.replaceChildren(create('p','empty','Unable to load '+entry.file+'. Check that the file exists and its JSON is valid. '+err.message));return;}if(!location.hash || decodeURIComponent(location.hash.slice(1))!==id){return;}current=s;$('library').classList.add('hidden');$('detail').classList.remove('hidden');$('song-title').textContent=s.title;$('artist').textContent=s.artist||'';const meta=$('meta');meta.replaceChildren();for(const v of [`Key: ${s.key||'—'}`,`Capo: ${s.capo||0}`])meta.append(create('span','pill',v));$('strumming').textContent=s.strumming||'Not specified';root.replaceChildren();for(const sec of s.sections||[]){const group=create('section');group.append(create('h3','',sec.name));for(const line of sec.lines||[]){const lineEl=create('div','lyric-line');for(const part of parseLine(String(line))){const seg=create('span','segment');seg.append(create('span','chord',part.chord||'\u00a0'),create('span','words',part.text||'\u00a0'));lineEl.append(seg)}group.append(lineEl)}root.append(group)}window.scrollTo(0,0)}
-function pause(){playing=false;cancelAnimationFrame(frame);frame=null;if($('play'))$('play').textContent='▶ Play'}
-function tick(now){if(!playing)return;const delta=Math.min(now-previousTime,100);previousTime=now;const perLine=Number($('speed').value);const approxLineHeight=48;const px=(delta/1000)*approxLineHeight/perLine;window.scrollBy(0,px);const bottom=document.documentElement.scrollHeight-innerHeight;if(window.scrollY>=bottom-2){pause();return}frame=requestAnimationFrame(tick)}
-function startPause(){if(playing){pause();return}if(scrollY>=document.documentElement.scrollHeight-innerHeight-2){window.scrollTo(0,0)}playing=true;$('play').textContent='Ⅱ Pause';previousTime=performance.now();frame=requestAnimationFrame(tick)}
-$('play').onclick=startPause;$('restart').onclick=()=>{pause();window.scrollTo({top:0,behavior:'smooth'})};$('speed').oninput=()=>{$('speed-label').value=Number($('speed').value).toFixed(1)+'s'};$('search').oninput=renderLibrary;$('back').onclick=()=>{pause();current=null;$('detail').classList.add('hidden');$('library').classList.remove('hidden');history.replaceState(null,'',location.pathname);window.scrollTo(0,0)};
-fetch('songs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Songs could not be loaded');return r.json()}).then(data=>{if(!Array.isArray(data)||data.some(s=>!s.id||!s.title||!s.file))throw Error('songs.json must contain song entries with id, title and file');songs=data.sort((a,b)=>a.title.localeCompare(b.title,undefined,{sensitivity:'base',ignorePunctuation:true}));renderLibrary();const hash=decodeURIComponent(location.hash.slice(1));if(hash)showSong(hash)}).catch(err=>{$('library-status').classList.remove('hidden');$('library-status').textContent='Could not load songs.json. Make sure index.html and songs.json are in the repository root. '+err.message});
-</script></body></html>
+
+let songs = [];
+
+let current = null;
+
+let playing = false;
+
+let previousTime = 0;
+
+let frame = null;
+
+let requestNumber = 0;
+
+const $ = id => document.getElementById(id);
+
+function create(tag, cls, content) {
+
+  const el = document.createElement(tag);
+
+  if (cls) el.className = cls;
+
+  if (content !== undefined) {
+
+    el.textContent = String(content);
+
+  }
+
+  return el;
+
+}
+
+// Read chords written as [G], [Cadd9], [Em], etc.
+
+function parseLine(line) {
+
+  const result = [];
+
+  const regex = /\[([^\]]+)\]/g;
+
+  let index = 0;
+
+  let lastChord = '';
+
+  for (const match of line.matchAll(regex)) {
+
+    if (match.index > index || lastChord) {
+
+      result.push({
+
+        chord: lastChord,
+
+        text: line.slice(index, match.index)
+
+      });
+
+    }
+
+    lastChord = match[1];
+
+    index = match.index + match[0].length;
+
+  }
+
+  result.push({
+
+    chord: lastChord,
+
+    text: line.slice(index)
+
+  });
+
+  return result;
+
+}
+
+// Display songs alphabetically.
+
+function renderLibrary() {
+
+  const list = $('song-list');
+
+  list.replaceChildren();
+
+  const query = $('search').value.toLowerCase().trim();
+
+  const matches = songs
+
+    .filter(song =>
+
+      `${song.title} ${song.artist || ''}`
+
+        .toLowerCase()
+
+        .includes(query)
+
+    )
+
+    .sort((a, b) =>
+
+      a.title.localeCompare(b.title, undefined, {
+
+        sensitivity: 'base',
+
+        ignorePunctuation: true
+
+      })
+
+    );
+
+  $('library-status').classList.toggle(
+
+    'hidden',
+
+    matches.length !== 0
+
+  );
+
+  $('library-status').textContent = songs.length
+
+    ? 'No songs found.'
+
+    : 'No songs added yet.';
+
+  for (const song of matches) {
+
+    const item = create('button', 'song-item');
+
+    item.type = 'button';
+
+    const info = create('span');
+
+    const description = [
+
+      song.artist,
+
+      song.key ? 'Key: ' + song.key : ''
+
+    ].filter(Boolean).join(' · ');
+
+    info.append(
+
+      create('strong', '', song.title),
+
+      create('small', '', description || 'Tap to open')
+
+    );
+
+    item.append(
+
+      info,
+
+      create('span', 'arrow', '›')
+
+    );
+
+    item.onclick = () => {
+
+      location.hash = encodeURIComponent(song.id);
+
+      showSong(song.id);
+
+    };
+
+    list.append(item);
+
+  }
+
+}
+
+// Load one selected song.
+
+async function showSong(id) {
+
+  const entry = songs.find(song => song.id === id);
+
+  if (!entry) return;
+
+  const thisRequest = ++requestNumber;
+
+  pause();
+
+  const root = $('lyrics');
+
+  root.replaceChildren(
+
+    create('p', 'empty', 'Loading song…')
+
+  );
+
+  $('library').classList.add('hidden');
+
+  $('detail').classList.remove('hidden');
+
+  window.scrollTo(0, 0);
+
+  let song;
+
+  try {
+
+    // Request fresh song data from GitHub Pages.
+
+    const url = new URL(entry.file, document.baseURI);
+
+    url.searchParams.set('_v', Date.now());
+
+    const response = await fetch(url, {
+
+      cache: 'no-store'
+
+    });
+
+    if (!response.ok) {
+
+      throw new Error('HTTP ' + response.status);
+
+    }
+
+    song = await response.json();
+
+    if (!song || !Array.isArray(song.sections)) {
+
+      throw new Error('Invalid song format');
+
+    }
+
+  } catch (error) {
+
+    if (thisRequest !== requestNumber) return;
+
+    root.replaceChildren(
+
+      create(
+
+        'p',
+
+        'empty',
+
+        'Unable to load ' + entry.file +
+
+        '. Check that the JSON file exists and is valid. ' +
+
+        error.message
+
+      )
+
+    );
+
+    return;
+
+  }
+
+  if (thisRequest !== requestNumber) return;
+
+  current = song;
+
+  $('song-title').textContent = song.title;
+
+  $('artist').textContent = song.artist || '';
+
+  const meta = $('meta');
+
+  meta.replaceChildren();
+
+  for (const value of [
+
+    `Key: ${song.key || '—'}`,
+
+    `Capo: ${song.capo ?? 0}`
+
+  ]) {
+
+    meta.append(create('span', 'pill', value));
+
+  }
+
+  $('strumming').textContent =
+
+    song.strumming || 'Not specified';
+
+  root.replaceChildren();
+
+  for (const section of song.sections) {
+
+    const group = create('section', 'section');
+
+    group.append(
+
+      create('h3', '', section.name || '')
+
+    );
+
+    for (const line of section.lines || []) {
+
+      const lineEl = create('div', 'lyric-line');
+
+      for (const part of parseLine(String(line))) {
+
+        const segment = create('span', 'segment');
+
+        segment.append(
+
+          create('span', 'chord', part.chord || '\u00a0'),
+
+          create('span', 'words', part.text || '\u00a0')
+
+        );
+
+        lineEl.append(segment);
+
+      }
+
+      group.append(lineEl);
+
+    }
+
+    root.append(group);
+
+  }
+
+  window.scrollTo(0, 0);
+
+}
+
+// Stop automatic scrolling.
+
+function pause() {
+
+  playing = false;
+
+  if (frame !== null) {
+
+    cancelAnimationFrame(frame);
+
+  }
+
+  frame = null;
+
+  $('play').textContent = '▶ Play';
+
+}
+
+// Automatic scrolling.
+
+function tick(now) {
+
+  if (!playing) return;
+
+  const delta = Math.min(now - previousTime, 100);
+
+  previousTime = now;
+
+  const secondsPerLine = Number($('speed').value);
+
+  const approximateLineHeight = 48;
+
+  const pixels =
+
+    (delta / 1000) *
+
+    approximateLineHeight /
+
+    secondsPerLine;
+
+  window.scrollBy(0, pixels);
+
+  const bottom =
+
+    document.documentElement.scrollHeight -
+
+    window.innerHeight;
+
+  if (window.scrollY >= bottom - 2) {
+
+    pause();
+
+    return;
+
+  }
+
+  frame = requestAnimationFrame(tick);
+
+}
+
+function startPause() {
+
+  if (playing) {
+
+    pause();
+
+    return;
+
+  }
+
+  const bottom =
+
+    document.documentElement.scrollHeight -
+
+    window.innerHeight;
+
+  if (window.scrollY >= bottom - 2) {
+
+    window.scrollTo(0, 0);
+
+  }
+
+  playing = true;
+
+  $('play').textContent = 'Ⅱ Pause';
+
+  previousTime = performance.now();
+
+  frame = requestAnimationFrame(tick);
+
+}
+
+// Controls.
+
+$('play').onclick = startPause;
+
+$('restart').onclick = () => {
+
+  pause();
+
+  window.scrollTo({
+
+    top: 0,
+
+    behavior: 'smooth'
+
+  });
+
+};
+
+$('speed').oninput = () => {
+
+  $('speed-label').value =
+
+    Number($('speed').value).toFixed(1) + 's';
+
+};
+
+$('search').oninput = renderLibrary;
+
+$('back').onclick = () => {
+
+  pause();
+
+  requestNumber++;
+
+  current = null;
+
+  $('detail').classList.add('hidden');
+
+  $('library').classList.remove('hidden');
+
+  history.replaceState(
+
+    null,
+
+    '',
+
+    location.pathname + location.search
+
+  );
+
+  window.scrollTo(0, 0);
+
+};
+
+// Load the main song index.
+
+async function loadLibrary() {
+
+  try {
+
+    const url = new URL('songs.json', document.baseURI);
+
+    url.searchParams.set('_v', Date.now());
+
+    const response = await fetch(url, {
+
+      cache: 'no-store'
+
+    });
+
+    if (!response.ok) {
+
+      throw new Error('Songs could not be loaded');
+
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data)) {
+
+      throw new Error('Invalid songs.json');
+
+    }
+
+    songs = data.sort((a, b) =>
+
+      a.title.localeCompare(b.title, undefined, {
+
+        sensitivity: 'base',
+
+        ignorePunctuation: true
+
+      })
+
+    );
+
+    renderLibrary();
+
+    const hash = decodeURIComponent(
+
+      location.hash.slice(1)
+
+    );
+
+    if (hash) {
+
+      showSong(hash);
+
+    }
+
+  } catch (error) {
+
+    $('library-status').classList.remove('hidden');
+
+    $('library-status').textContent =
+
+      'Could not load songs.json. ' + error.message;
+
+  }
+
+}
+
+loadLibrary();
+
+</script>
+
+</body>
+
+</html>
