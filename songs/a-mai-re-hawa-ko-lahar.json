@@ -1,18 +1,115 @@
+
 {
   "id": "a-mai-re-hawa-ko-lahar",
   "title": "A Mai Re (Hawa Ko Lahar)",
   "artist": "",
   "key": "",
-  "capo": 0,
-  "strumming": "",
+  "capo": 3,
+  "strumming": "DUU DUU DDU",
   "sections": [
     {
-      "name": "Verse 1",
-      "lines": []
+      "name": "Intro",
+      "lines": [
+        "[C] DDU",
+        "[Em] DUU DDU",
+        "[F] DDU",
+        "[C] DUU DDU",
+        "[F] DDU",
+        "[C] DUU DDU",
+        "[Am] DDU",
+        "[G] DUUDU"
+      ]
     },
     {
       "name": "Chorus",
-      "lines": []
+      "lines": [
+        "[C]Hawa Ko [Em]Lahar Sangai",
+        "[F]Udhi Rahana [C]Mann Bho Ni",
+        "[F]Timro Tyo [C]Baasanaa",
+        "[Am]Mann Mai [G]Chalyo Re",
+        "",
+        "[C]Hawa Ko [Em]Lahar Sangai",
+        "[F]Udhi Rahana [C]Mann Bho Ni",
+        "[F]Timro Tyo [C]Baasanaa",
+        "[Am]Mann Mai [G]Chalyo Re",
+        "",
+        "[C]Timro Tyo [Em]Boli Maa",
+        "[F]Magna [C]Bhayera",
+        "[F]Timro Agadi [C]Ful Haru Bani",
+        "[Am]Cham Cham Cham Cham",
+        "[G]Naachyo Re",
+        "",
+        "[C]Ooo .. [Em]Ho Ho .. [Am]Hoo [G]Ho Ho",
+        "[C]Ho Ho … [Em]Umm … [F]~"
+      ]
+    },
+    {
+      "name": "Verse 1",
+      "lines": [
+        "[C]Para Baata [Em]Sundaa",
+        "[F]Timro Tyo [C]Boli",
+        "[F]Mutu Mai [C]Laagera",
+        "[Am]Mann Nai [G]Ramaayo Re",
+        "",
+        "[C]Para Baata [Em]Sundaa",
+        "[F]Timro Tyo [C]Boli",
+        "[F]Mutu Mai [C]Laagera",
+        "[Am]Mann Nai [G]Ramaayo Re",
+        "",
+        "[C]Timro Tyo [Em]Heraai Maa",
+        "[F]Lattha Ma [C]Vayera",
+        "[F]Yo Be-Rangi [C]Jindagi Mai",
+        "[Am]Indreni Bani [G]Aayau Re",
+        "",
+        "[C]Ooo .. [Em]Oo .. [Am7]Ho Ho .. [G]",
+        "",
+        "[C]Timi Aayi [Em7]Yo Dharti",
+        "[F]Rangaayo Re"
+      ]
+    },
+    {
+      "name": "Verse 2",
+      "lines": [
+        "[F]Bataash Maa",
+        "[G]Udhe Jhai",
+        "[F]Laagna Thaalyo",
+        "[G]Yo Mann",
+        "[F]Timrai ..",
+        "[G]Kalpanaa Maa",
+        "",
+        "[F]Bhule Jhai",
+        "[G]Laagyo Ni Yo Tann",
+        "",
+        "[C]Timrai Sansaar [Em]Maa",
+        "([Am7]Timrai Sansaar [G]Maa)",
+        "[C]Dubna Mann [Em]Bho Ni",
+        "([Am7]Dubna Mann [G]Bho Ni)",
+        "[C]Meraa Saaraa [Em]Khusi",
+        "([Am6]Meraa Saaraa [G]Khusi)",
+        "[C]Gare Timrai [Em]Nimti",
+        "([C]Gare Timrai [Em]Nimti)"
+      ]
+    },
+    {
+      "name": "Final Chorus",
+      "lines": [
+        "[C]Hawa Ko [Em]Lahar Sangai",
+        "[F]Udhi Rahana [C]Mann Bho Ni",
+        "[F]Timro Tyo [C]Baasanaa",
+        "[Am]Mana Mai [G]Chalyo Re",
+        "",
+        "[C]Timro Tyo [Em]Boli Maa",
+        "[F]Magna [C]Bhayera",
+        "[F]Timro Agadi [C]Ful Haru Bani",
+        "[Am]Cham Cham Cham Cham",
+        "[G]Naachyo Re",
+        "",
+        "[C]Timi Aayi [Em7]Yo Dharti Ma",
+        "[F]Rangin [C]Chaayo Re",
+        "[F]Kataaulaa [C]Jindagi Yo",
+        "[Am]Timro Haat [G]Samaayi",
+        "[C]"
+      ]
     }
   ]
 }
