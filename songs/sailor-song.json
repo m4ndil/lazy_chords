@@ -1,18 +1,76 @@
 {
   "id": "sailor-song",
   "title": "Sailor Song",
-  "artist": "",
+  "artist": "Gigi Perez",
   "key": "",
-  "capo": 0,
-  "strumming": "",
+  "capo": 3,
+  "strumming": "DD UUDU",
   "sections": [
     {
+      "name": "Intro",
+      "lines": [
+        "[C] [C] [Em] [Em] (x2)"
+      ]
+    },
+    {
       "name": "Verse 1",
-      "lines": []
+      "lines": [
+        "[C]I saw her in the [Em]rightest way",
+        "[G]Looking like Anne Hathaway",
+        "[C]Laughing while she [Em]hit her pen",
+        "[G]And coughed, and coughed",
+        "[C]And then, she came up [Em]to my knees",
+        "[G]Begging, baby, would you please?",
+        "[C]Do the things you [Em]said you'd do",
+        "[G]To me, to me"
+      ]
     },
     {
       "name": "Chorus",
-      "lines": []
+      "lines": [
+        "[C]Oh, won't you kiss me on the mouth and [Em]love me like a sailor?",
+        "[G]And when you get a taste, can you tell me what's my flavor?",
+        "[C]I don't believe in God, but I believe that [Em]you're my savior",
+        "[G]My mom says that she's worried, but I'm covered in His favor",
+        "[C]And when we're getting dirty, I forget [Em]all that is wrong",
+        "[G]I sleep so I can see you 'cause I hate to wait so long",
+        "[C]I sleep so I can see you and I [Em]hate to wait so long",
+        "[G] [G]"
+      ]
+    },
+    {
+      "name": "Verse 2",
+      "lines": [
+        "[C]She took my fingers [Em]to her mouth",
+        "[G]The kind of thing that makes you proud",
+        "[C]That nothing else [Em]had ever",
+        "[G]Worked out, worked out",
+        "[C]And maybe I tried [Em]other things",
+        "[G]But nothing can capture the sting",
+        "[C]Of the venom, [Em]she's gonna spit [G]out right now"
+      ]
+    },
+    {
+      "name": "Chorus 2",
+      "lines": [
+        "[C]Oh, won't you kiss me on the mouth and [Em]love me like a sailor?",
+        "[G]And when you get a taste, can you tell me what's my flavor?",
+        "[C]I don't believe in God, but I believe that [Em]you're my savior",
+        "[G]I know that you've been worried, but you're dripping in my favor",
+        "[C]And when we're getting dirty, I forget [Em]all that is wrong",
+        "[G]I sleep so I can see you 'cause I hate to wait so long",
+        "[C]I sleep so I can see you and I [Em]hate to wait so long",
+        "[G] [G]"
+      ]
+    },
+    {
+      "name": "Outro",
+      "lines": [
+        "[C]And we can run away to the [Em]walls inside your house",
+        "[G]I can be the cat, baby, you can be the mouse",
+        "[C]And we can laugh off things that we [Em]know nothing about",
+        "[G]We can go forever until you wanna sit it out"
+      ]
     }
   ]
 }
