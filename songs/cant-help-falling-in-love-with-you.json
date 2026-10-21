@@ -1,18 +1,43 @@
 {
   "id": "cant-help-falling-in-love-with-you",
-  "title": "Can't Help Falling in Love with You",
-  "artist": "",
+  "title": "Can't Help Falling in Love",
+  "artist": "Elvis Presley",
   "key": "",
-  "capo": 0,
-  "strumming": "",
+  "capo": 5,
+  "strumming": "DDUUDU",
   "sections": [
     {
-      "name": "Verse 1",
-      "lines": []
+      "name": "Verse 1 - Soft Strums",
+      "lines": [
+        "[G]Wise [F#]men [Cadd9]say",
+        "[G]Only [G]fools [F#]rush [Cadd9]in",
+        "[G]But I [F#]can't help [Cadd9]falling in love [G]with you"
+      ]
+    },
+    {
+      "name": "Verse 2",
+      "lines": [
+        "[G]Shall [F#]I [Cadd9]stay?",
+        "[G]Would it [F#]be a [Cadd9]sin",
+        "[G]If I [F#]can't help [Cadd9]falling in love [G]with you?"
+      ]
     },
     {
       "name": "Chorus",
-      "lines": []
+      "lines": [
+        "[G]Take my [F#]hand",
+        "[Cadd9]Take my whole life, [G]too",
+        "[G]For I [F#]can't help [Cadd9]falling in love [G]with you"
+      ]
+    },
+    {
+      "name": "Final Chorus",
+      "lines": [
+        "[G]Take my [F#]hand",
+        "[Cadd9]Take my whole life, [G]too",
+        "[G]For I [F#]can't help [Cadd9]falling in love [G]with you",
+        "[G]For I [F#]can't help [Cadd9]falling in love [G]with you"
+      ]
     }
   ]
 }
