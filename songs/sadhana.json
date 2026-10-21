@@ -3,16 +3,80 @@
   "title": "Sadhana",
   "artist": "",
   "key": "",
-  "capo": 0,
-  "strumming": "",
+  "capo": 3,
+  "strumming": "D DUU DU",
   "sections": [
     {
       "name": "Verse 1",
-      "lines": []
+      "lines": [
+        "Tetikai [G]Chhodana [Cadd9]Kesalai",
+        "Udauna [G]Deu Hawa [Cadd9]Lai",
+        "Dubchu Hola [G]Timra Aakha [Cadd9]Mai",
+        "Dubi Rahana [G]Chha Tyehi Malai [Dsus]"
+      ]
     },
     {
       "name": "Chorus",
-      "lines": []
+      "lines": [
+        "[G]Ma..",
+        "[Cadd9]Ma Maya Maar[G]dina",
+        "[Cadd9]Timilai Chhadd[G]ina~",
+        "[Cadd9]Ma Maya Maardi[Dsus]na.."
+      ]
+    },
+    {
+      "name": "Refrain",
+      "lines": [
+        "[G]Timi.. [Cadd9]Manama Chhau Mero [G]..",
+        "[Cadd9]Samjhana Hau Me[G]ro..",
+        "Kahile Birsi[Dsus]nna.."
+      ]
+    },
+    {
+      "name": "Verse 2",
+      "lines": [
+        "[G]Tmro Lagi Phool [Cadd9]Tipchu Hai",
+        "Man Pare [G]Kesh Mai [Cadd9]Siurinu",
+        "Tehi Tala [G]Chowk Mai [Cadd9]Hunchu Hai",
+        "Yaad Aye [G]Bhetna [Dsus]Ma.."
+      ]
+    },
+    {
+      "name": "Chorus",
+      "lines": [
+        "[G]Ma..",
+        "[Cadd9]Ma Maya Maar[G]dina",
+        "[Cadd9]Timilai Chhadd[G]ina~",
+        "[Cadd9]Ma Maya Maardi[Dsus]na.."
+      ]
+    },
+    {
+      "name": "Refrain",
+      "lines": [
+        "[G]Timi.. [Cadd9]Manama Chhau Mero [G]..",
+        "[Cadd9]Samjhana Hau Me[G]ro..",
+        "Kahile Birsi[Dsus]nna.."
+      ]
+    },
+    {
+      "name": "Bridge",
+      "lines": [
+        "[G]Chhaya Hau Kaile Nachhutne",
+        "Sapana Hau...",
+        "Har Raat Aau [Dsus]ney..",
+        "~~eh eh",
+        "[G]Mana Yo Kaile Namarne",
+        "Timlai Samjhi",
+        "Ti~mlai Samjhi..."
+      ]
+    },
+    {
+      "name": "Outro",
+      "lines": [
+        "Mmm Hmm Hmm hmm",
+        "Mmm Hmm Hmm hmm",
+        "Mmmm……"
+      ]
     }
   ]
 }
