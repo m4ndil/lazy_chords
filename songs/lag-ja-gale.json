@@ -1,18 +1,38 @@
+
 {
   "id": "lag-ja-gale",
   "title": "Lag Ja Gale",
-  "artist": "",
-  "key": "",
+  "artist": "Lata Mangeshkar",
+  "key": "G",
   "capo": 0,
-  "strumming": "",
+  "strumming": "DDUDU",
   "sections": [
     {
-      "name": "Verse 1",
-      "lines": []
+      "name": "Chorus",
+      "lines": [
+        "[G]Lag ja gale, [Em]ke fir yeh haseen [G]raat ho [D]na ho",
+        "[C]Shayad fir is janam main, [D]mulakat [G]ho na ho [G]",
+        "[G]Lag ja gale, fir..."
+      ]
     },
     {
-      "name": "Chorus",
-      "lines": []
+      "name": "Verse 1",
+      "lines": [
+        "[G]Humko mili hain [C]aaj yeh, [Am]ghadiyan [G]naseeb se",
+        "[G]Ji bhar ke dekh [C]lijiye, [Am]humko [G]kareeb se",
+        "[G]Fir aapke [Em]naseeb main, [G]yeh baat ho [D]na ho",
+        "[C]Shayad fir is janam main, [D]mulakat [G]ho na ho [G]",
+        "[G]Lag ja gale, fir..."
+      ]
+    },
+    {
+      "name": "Verse 2",
+      "lines": [
+        "[G]Paas aaiye ke [C]hum nahin [Am]aayenge [G]baar baar",
+        "[G]Baahein gale mein [C]daal ke [Am]hum ro lein zaar [G]zaar",
+        "[G]Aankhon se phir [Em]yeh pyaar ki [G]barsaat ho na [D]ho",
+        "[C]Shaayad phir is janam mein [D]mulaqaat [G]ho na ho [G]"
+      ]
     }
   ]
 }
