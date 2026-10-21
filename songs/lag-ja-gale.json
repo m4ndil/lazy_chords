@@ -1,18 +1,18 @@
-
 {
   "id": "lag-ja-gale",
   "title": "Lag Ja Gale",
   "artist": "Lata Mangeshkar",
   "key": "G",
-  "capo": 0,
+  "capo": 15,
   "strumming": "DDUDU",
   "sections": [
     {
       "name": "Chorus",
       "lines": [
-        "[G]Lag ja gale, [Em]ke fir yeh haseen [G]raat ho [D]na ho",
-        "[C]Shayad fir is janam main, [D]mulakat [G]ho na ho [G]",
-        "[G]Lag ja gale, fir..."
+        "[G]Lag ja gale, [Em]ke fir yeh haseen [G]raat [Em]ho [D]na ho",
+        "[C]Shayad fir is janam main, [D]mulakat [G]ho [Am]na [G]ho",
+        "[G]Lag ja gale, fir...",
+        "[C]Hooo [Am]hooo [D]hooo ooo [G]oo ho"
       ]
     },
     {
@@ -20,9 +20,10 @@
       "lines": [
         "[G]Humko mili hain [C]aaj yeh, [Am]ghadiyan [G]naseeb se",
         "[G]Ji bhar ke dekh [C]lijiye, [Am]humko [G]kareeb se",
-        "[G]Fir aapke [Em]naseeb main, [G]yeh baat ho [D]na ho",
-        "[C]Shayad fir is janam main, [D]mulakat [G]ho na ho [G]",
-        "[G]Lag ja gale, fir..."
+        "[G]Fir aapke [Em]naseeb main, [G]yeh [Em]baat ho [D]na ho",
+        "[C]Shayad fir is janam main, [D]mulakat [G]ho [Am]na [G]ho",
+        "[G]Lag ja gale, fir...",
+        "[C]Hooo [Am]hooo [D]hooo ooo [G]oo ho"
       ]
     },
     {
@@ -30,8 +31,9 @@
       "lines": [
         "[G]Paas aaiye ke [C]hum nahin [Am]aayenge [G]baar baar",
         "[G]Baahein gale mein [C]daal ke [Am]hum ro lein zaar [G]zaar",
-        "[G]Aankhon se phir [Em]yeh pyaar ki [G]barsaat ho na [D]ho",
-        "[C]Shaayad phir is janam mein [D]mulaqaat [G]ho na ho [G]"
+        "[G]Aankhon se phir [Em]yeh pyaar ki [G]barsaat [Em]ho na [D]ho",
+        "[C]Shaayad phir is janam mein [D]mulaqaat [G]ho [Am]na [G]ho",
+        "[C]Hooo [Am]hooo [D]hooo ooo [G]oo ho"
       ]
     }
   ]
