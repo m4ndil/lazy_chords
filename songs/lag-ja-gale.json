@@ -9,10 +9,10 @@
     {
       "name": "Chorus",
       "lines": [
-        "[G]Lag ja gale, [Em]ke fir yeh haseen [G]raat [Em]ho [D]na ho",
-        "[C]Shayad fir is janam main, [D]mulakat [G]ho [Am]na [G]ho",
+        "[G]Lag ja gale, [Em]ke fir yeh haseen [G]raat ho [D]na ho",
+        "[C]Shayad fir is janam main, [D]mulakat ho na [G]ho",
         "[G]Lag ja gale, fir...",
-        "[C]Hooo [Am]hooo [D]hooo ooo [G]oo ho"
+        "[G]Hooo[C]Hooo [Am]hooo [D]hooo ooo [G]oo ho"
       ]
     },
     {
@@ -23,17 +23,17 @@
         "[G]Fir aapke [Em]naseeb main, [G]yeh [Em]baat ho [D]na ho",
         "[C]Shayad fir is janam main, [D]mulakat [G]ho [Am]na [G]ho",
         "[G]Lag ja gale, fir...",
-        "[C]Hooo [Am]hooo [D]hooo ooo [G]oo ho"
+        "[G]Hooo[C]Hooo [Am]hooo [D]hooo ooo [G]oo ho"
       ]
     },
     {
       "name": "Verse 2",
       "lines": [
-        "[G]Paas aaiye ke [C]hum nahin [Am]aayenge [G]baar baar",
-        "[G]Baahein gale mein [C]daal ke [Am]hum ro lein zaar [G]zaar",
-        "[G]Aankhon se phir [Em]yeh pyaar ki [G]barsaat [Em]ho na [D]ho",
-        "[C]Shaayad phir is janam mein [D]mulaqaat [G]ho [Am]na [G]ho",
-        "[C]Hooo [Am]hooo [D]hooo ooo [G]oo ho"
+        "[G]Paas aaiye ke [C]hum nahin aayenge [G]baar baar",
+        "[G]Baahein gale mein [C]daal ke hum ro lein zaar [G]zaar",
+        "[G]Aankhon se phir [Em]yeh pyaar ki [G]barsaat ho na [D]ho",
+        "[C]Shaayad phir is janam mein [D]mulaqaat [G]ho na [G]ho",
+        "[G]Hooo[C]Hooo [Am]hooo [D]hooo ooo [G]oo ho"
       ]
     }
   ]
